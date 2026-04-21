@@ -27,4 +27,5 @@ matplotlib
 # ─── Utilities ───────────────────────────────────────────────────────────────
 pdfplumber             # extract text from PDFs (rapport_prospection)
 requests
+gdown                  # download single ResBIM sample from Google Drive
 python-dotenv
