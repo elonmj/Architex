@@ -1,0 +1,30 @@
+# ─── Core BIM parsing ────────────────────────────────────────────────────────
+ifcopenshell
+specklepy
+
+# ─── Data / graph layer ──────────────────────────────────────────────────────
+pandas
+networkx
+numpy
+
+# ─── 3D geometry ─────────────────────────────────────────────────────────────
+open3d                 # mesh, point cloud, visualisation
+
+# ─── ML / AI ─────────────────────────────────────────────────────────────────
+# torch and torch-geometric installed separately in post-create.sh (CPU wheel)
+huggingface_hub        # download models, datasets from HF Hub
+transformers           # HF transformer models
+
+# ─── Demo / API ──────────────────────────────────────────────────────────────
+gradio                 # HF Spaces compatible UI
+fastapi
+uvicorn[standard]
+
+# ─── Notebooks & visualisation ───────────────────────────────────────────────
+jupyterlab
+matplotlib
+
+# ─── Utilities ───────────────────────────────────────────────────────────────
+pdfplumber             # extract text from PDFs (rapport_prospection)
+requests
+python-dotenv

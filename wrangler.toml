@@ -1,0 +1,12 @@
+# Architex API – Cloudflare Workers
+name = "architex-api"
+main = "workers/api/index.js"
+compatibility_date = "2024-04-01"
+
+[vars]
+# Set this to your deployed HF Space URL after running: huggingface-cli login && gradio deploy
+# Example: HF_SPACE_URL = "https://josaphat-architex.hf.space"
+HF_SPACE_URL = ""
+
+# Local dev: wrangler dev workers/api/index.js
+# Deploy:    wrangler deploy

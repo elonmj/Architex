@@ -1,0 +1,52 @@
+{
+  "name": "Architex BIM AI",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "editor.formatOnSave": true,
+        "editor.rulers": [100],
+        "files.eol": "\n",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "jupyter.notebookFileRoot": "${workspaceFolder}"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "github.copilot",
+        "github.copilot-chat",
+        "huggingface.huggingface-vscode-chat",
+        "darpanaswal.hf-hub-vscode",
+        "ms-vsliveshare.vsliveshare",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "forwardPorts": [7860, 8080, 8888],
+  "portsAttributes": {
+    "7860": {
+      "label": "HF Spaces / Gradio demo",
+      "onAutoForward": "notify"
+    },
+    "8080": {
+      "label": "API REST (FastAPI)",
+      "onAutoForward": "notify"
+    },
+    "8888": {
+      "label": "Jupyter Lab",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "remoteUser": "vscode"
+}

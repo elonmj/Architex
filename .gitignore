@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+*.egg-info/
+
+# Local archive / heavy docs
+Arch Noé/
+*.pdf
+
+# Data — do not commit large IFC datasets
+data/samples/*.ifc
+data/models/
+outputs/
+
+# Secrets
+.env
+*.env
+
+# Node / Cloudflare Workers
+node_modules/
+.wrangler/
+
+# OS
+.DS_Store
+Thumbs.db
